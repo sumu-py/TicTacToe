@@ -1,2 +1,2 @@
 # TicTacToe
-This is my first attempt of the python code of the tictactoe game.
+This is my first attempt on writing the python code of the tictactoe game.
