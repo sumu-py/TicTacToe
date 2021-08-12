@@ -90,6 +90,7 @@ while turn <= 5:
     while go < 1:
         try:
             p_move = int(input("Play your move [1-9]: "))
+            print()
         except:
             print("Invalid move!, try again.")
         else:
@@ -106,6 +107,7 @@ while turn <= 5:
     if turn >= 4:
         win, char = win_check(win_moves, X_pos, table)
         if win == 1:
+            print_table(table)
             break
 
     # ------- Computer move -------
@@ -115,6 +117,8 @@ while turn <= 5:
         O_pos.append(c_move)
         num.remove(c_move)
         print_table(table)
+        print()
+        
     elif turn == 5:
         print("------- Deuce -------")
         break
@@ -127,6 +131,8 @@ while turn <= 5:
                 O_pos.append(c_move)
                 num.remove(c_move)
                 print_table(table)
+                print()
+                
             if turn >= 3:  # Check if computer has won or not, if yes then exit the loop
                 win, char = win_check(win_moves, O_pos, table)
                 if win == 1:
@@ -140,6 +146,8 @@ while turn <= 5:
                 O_pos.append(c_move)
                 num.remove(c_move)
                 print_table(table)
+                print()
+                
 
         if Xtwo_seq is None and Otwo_seq is None:  # Attack, if nxt 2 moves can lead computer to win
             for ind1 in win_moves:
@@ -154,6 +162,8 @@ while turn <= 5:
                             O_pos.append(c_move)
                             num.remove(c_move)
                             print_table(table)
+                            print()
+                            
                             break
                 if c_move is not None: break
 
@@ -163,6 +173,8 @@ while turn <= 5:
             O_pos.append(c_move)
             num.remove(c_move)
             print_table(table)
+            print()
+            
     turn += 1
 
 print()
